@@ -29,7 +29,7 @@ public class Automatizacion {
         }
     }*/
     public static void main(String[] args){
-       System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Downloads\\geckodriver-v0.34.0-win64\\geckodriver.exe");
+       System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        WebDriver driver = new FirefoxDriver();      
        try{
            // 1.- Ir al login
@@ -60,14 +60,14 @@ public class Automatizacion {
            //------------
            //Lectura de archivo
            //------------
-           String rutaArchivo = "C:\\Users\\Duoc\\Downloads\\usuarios.txt";
+           String rutaArchivo = "C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios.txt";
            List<String[]> usuarios = new ArrayList<>();
            
            try(BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))){
                String linea;
                while ((linea = br.readLine()) != null){
                    String[] datos = linea.split(",");
-                   if(datos.length == 3){
+                   if(datos.length == 5){
                        usuarios.add(datos);
                    } 
                }
@@ -82,6 +82,8 @@ public class Automatizacion {
                 String nombre = usuario[0];
                 String email = usuario[1];
                 String ciudad = usuario[2];
+                String edad = usuario[3];
+                String fono = usuario[4];
                 
                 driver.findElement(By.id("nombre")).clear();
                 driver.findElement(By.id("nombre")).sendKeys(nombre);
@@ -91,21 +93,29 @@ public class Automatizacion {
                 
                 driver.findElement(By.id("ciudad")).clear();
                 driver.findElement(By.id("ciudad")).sendKeys(ciudad);
-                driver.findElement(By.cssSelector("#dataForm button[type='submit']")).click();
+                
+                driver.findElement(By.id("edad")).clear();
+                driver.findElement(By.id("edad")).sendKeys(edad);
+                
+                driver.findElement(By.id("fono")).clear();
+                driver.findElement(By.id("fono")).sendKeys(fono);
+                
+                driver.findElement(By.cssSelector("button.btn:nth-child(1)")).click();
                 
            }
-           //Editar Usuarios
-           WebElement editar = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/table/tbody/tr[1]/td[4]/button[1]"));
-           editar.click();
-           driver.findElement(By.id("nombre")).clear();
-           driver.findElement(By.id("nombre")).sendKeys(" Luffy");
-           driver.findElement(By.cssSelector("#dataForm button[type='submit']")).click();
            
+           //Entrar a la administracion
+           WebElement btnIngresar2 = driver.findElement(By.xpath("/html/body/header/div/div[2]/a"));
+           btnIngresar2.click();
+           
+           Thread.sleep(2000);
+          
            //Eliminar Usuario
            int index = 1;
            while(true){
                try{
-                WebElement eliminar = driver.findElement(By.xpath("/html/body/div/div/div[2]/div/table/tbody/tr["+index+"]/td[4]/button[2]"));
+                WebElement eliminar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/table/tbody/tr[1]/td[6]/form/button"));
+                Thread.sleep(2000);
                 eliminar.click();
                    System.err.println("Registro eliminado con indice"+index);
                }catch(Exception e){

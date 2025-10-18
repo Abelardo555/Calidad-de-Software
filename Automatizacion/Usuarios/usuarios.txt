@@ -1,0 +1,20 @@
+Carlos,carlos@gmail.com,Providencia,24,+56973928946
+Ana,ana@gmail.com,Las Condes,34,+56983988873
+Felipe,felipe@gmail.com,Vitacura,26,+56929929600
+María,maria@gmail.com,Ñuñoa,24,+56913507555
+Luis,luis@gmail.com,Maipú,53,+56934290492
+Patricia,patricia@gmail.com,La Florida,25,+56966406527
+Eduardo,eduardo@gmail.com,Recoleta,43,+56933773006
+Claudia,claudia@gmail.com,Macul,56,+56956638631
+Ricardo,ricardo@gmail.com,Peñalolén,27,+56968061617
+Teresa,teresa@gmail.com,La Reina,20,+56929898465
+Juan,juan@gmail.com,Puente Alto,30,+56924542583
+Elena,elena@gmail.com,San Miguel,65,+56948257775
+Javier,javier@gmail.com,El Bosque,28,+56947250423
+Laura,laura@gmail.com,La Pintana,30,+56941370330
+Roberto,roberto@gmail.com,Cerro Navia,21,+56921386045
+Silvia,silvia@gmail.com,San Bernardo,42,+56927826688
+David,david@gmail.com,Estación Central,24,+56965752297
+Isabel,isabel@gmail.com,Lo Barnechea,49,+56987676272
+Manuel,manuel@gmail.com,Maipú,64,+56981365453
+Carmen,carmen@gmail.com,San Joaquín,19,+56936555581
