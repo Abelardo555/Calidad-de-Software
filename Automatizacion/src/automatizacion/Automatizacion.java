@@ -109,6 +109,30 @@ public class Automatizacion {
            btnIngresar2.click();
            
            Thread.sleep(2000);
+           
+           //Editar Usuarios
+           WebElement editar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/table/tbody/tr/td[6]/a"));
+           editar.click(); 
+           
+           driver.findElement(By.id("nombre")).clear();
+           driver.findElement(By.id("nombre")).sendKeys(" Luffy");
+           
+           driver.findElement(By.id("email")).clear();
+           driver.findElement(By.id("email")).sendKeys("car@gmail.com");
+           
+           driver.findElement(By.id("ciudad")).clear();
+           driver.findElement(By.id("ciudad")).sendKeys("Puente Alto");
+           
+           driver.findElement(By.id("edad")).clear();
+           driver.findElement(By.id("edad")).sendKeys("25");
+           
+           driver.findElement(By.id("fono")).clear();
+           driver.findElement(By.id("fono")).sendKeys("+56983534140");
+           
+           driver.findElement(By.cssSelector("html body div.container.mt-5 div.row.justify-content-center div.col-md-8 div.card div.card-body form button.btn.btn-primary")).click();
+           
+           WebElement btnCancelar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/form/a"));
+           btnCancelar.click();
           
            //Eliminar Usuario
            int index = 1;
