@@ -113,10 +113,9 @@ public class Automatizacion {
            //Eliminar Usuario
            int index = 1;
            while(true){
+               WebElement Eliminar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/table/tbody/tr["+index+"]/td[6]/form/button"));
+               Eliminar.click();
                try{
-                WebElement eliminar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/table/tbody/tr[1]/td[6]/form/button"));
-                Thread.sleep(2000);
-                eliminar.click();
                    System.err.println("Registro eliminado con indice"+index);
                }catch(Exception e){
                    System.err.println("No se encontro elemento a eliminar");
