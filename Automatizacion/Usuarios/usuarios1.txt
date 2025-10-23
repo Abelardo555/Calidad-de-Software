@@ -1,0 +1,6 @@
+Carlos,carlos@gmail.com,Providencia,24,973928946
+Ana,ana@gmail.com,Las Condes,34,983988873
+Felipe,felipe@gmail.com,Vitacura,26,929929600
+María,maria@gmail.com,Ñuñoa,24,913507555
+Luis,luis@gmail.com,Maipú,53,934290492
+
