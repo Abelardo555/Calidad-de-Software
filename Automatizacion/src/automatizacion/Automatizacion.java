@@ -31,8 +31,8 @@ public class Automatizacion {
         }
     }*/
     public static void main(String[] args){
-       //System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
-       System.setProperty("webdriver.gecko.driver","C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
+       System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
+       //System.setProperty("webdriver.gecko.driver","C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        WebDriver driver = new FirefoxDriver();      
        try{
            // 1.- Ir al login
@@ -63,7 +63,8 @@ public class Automatizacion {
            //------------
            //Lectura de archivo
            //------------
-           String rutaArchivo = "C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios.txt";
+           //String rutaArchivo = "C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios.txt";
+           String rutaArchivo = "C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios1.txt";
            List<String[]> usuarios = new ArrayList<>();
            
            try(BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))){
@@ -103,9 +104,9 @@ public class Automatizacion {
                 driver.findElement(By.id("fono")).clear();
                 driver.findElement(By.id("fono")).sendKeys(fono);
                 
-                //WebElement btnIngresar3 = driver.findElement(By.xpath("/html/body/div/div[3]/div/div[1]/div/div/form/div[6]/button"));
-                //btnIngresar3.click();
-                driver.findElement(By.cssSelector("button.btn:nth-child(1)")).click();
+                WebElement btnIngresar3 = driver.findElement(By.xpath("/html/body/div/div[3]/div/div[1]/div/div/form/div[6]/button"));
+                btnIngresar3.click();
+                //driver.findElement(By.cssSelector("button.btn:nth-child(1)")).click();
                 
            }
            
