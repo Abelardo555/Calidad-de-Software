@@ -15,21 +15,6 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.devtools.v137.fedcm.FedCm;
 
 public class Automatizacion {
-    /*public static void main(String[] args) {
-        System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Downloads\\geckodriver-v0.34.0-win64\\geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();      
-        
-        try{
-            driver.get("https://fundacion-instituto-profesional-duoc-uc.github.io/ATY1102-Surf/");
-            WebElement body = driver.findElement(By.tagName("body"));
-            String texto = body.getText();
-            System.out.println(texto);
-        }catch(Exception e){
-            e.printStackTrace();
-        }finally{
-            driver.quit();
-        }
-    }*/
     public static void main(String[] args){
        System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        //System.setProperty("webdriver.gecko.driver","C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
@@ -141,7 +126,7 @@ public class Automatizacion {
            
           
            //Eliminar Usuario
-           int index = 1;
+           /**int index = 1;
            while(true){
                try{
                     WebElement eliminar = driver.findElement(By.cssSelector(".table > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(6) > form:nth-child(2) > button:nth-child(2)"));
@@ -169,7 +154,7 @@ public class Automatizacion {
                    System.err.println("No se encontro elemento a eliminar");
                    break;
                }
-           }
+           }**/
            
        }
        catch(Exception e){
