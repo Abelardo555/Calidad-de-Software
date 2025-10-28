@@ -15,7 +15,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.devtools.v137.fedcm.FedCm;
 
 public class Automatizacion {
-    public static void main(String[] args){
+    /**public static void main(String[] args){
        System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        //System.setProperty("webdriver.gecko.driver","C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        WebDriver driver = new FirefoxDriver();      
@@ -154,7 +154,7 @@ public class Automatizacion {
                    System.err.println("No se encontro elemento a eliminar");
                    break;
                }
-           }**/
+           }
            
        }
        catch(Exception e){
@@ -162,5 +162,5 @@ public class Automatizacion {
        }finally{
            //driver.quit();
        }
-    }
+    }**/
 }
