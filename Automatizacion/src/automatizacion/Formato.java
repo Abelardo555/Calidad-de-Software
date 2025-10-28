@@ -17,7 +17,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.devtools.v137.fedcm.FedCm;
 
 public class Formato {
-    public static void main(String[] args){
+    
+    /**public static void main(String[] args){
        System.setProperty("webdriver.gecko.driver","C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        //System.setProperty("webdriver.gecko.driver","C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\geckodriver-v0.34.0-win64\\geckodriver.exe");
        WebDriver driver = new FirefoxDriver();      
@@ -29,11 +30,17 @@ public class Formato {
            WebElement btnlogin= driver.findElement(By.xpath("/html/body/header/div/div[2]/a"));
            btnlogin.click();
        
+           //2.- Completar usuario y password
            WebElement userField = driver.findElement(By.id("id_username"));
+           //WebElement userField2 = driver.findElement(By.xpath("//*[@id=\"username\"]");
            userField.sendKeys("admin");
-       
+           
+           
            WebElement passField = driver.findElement(By.id("id_password"));
-           passField.sendKeys("admin123");          
+           passField.sendKeys("admin123");
+           
+           Thread.sleep(2000);
+          // TakesScreenshot(driver,"");
            
            WebElement btnIngresar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/form/div/button"));
            btnIngresar.click();
@@ -45,7 +52,7 @@ public class Formato {
            //Lectura de archivo
            //------------
            //String rutaArchivo = "C:\\Users\\Abelardo\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios.txt";
-           String rutaArchivo = "C:\\Users\\duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios1.txt";
+           String rutaArchivo = "C:\\Users\\Duoc\\Documents\\GitHub\\Calidad-de-Software\\Automatizacion\\Usuarios\\usuarios1.txt";
            List<String[]> usuarios = new ArrayList<>();
            
            try(BufferedReader br = new BufferedReader(new FileReader(rutaArchivo))){
@@ -90,12 +97,42 @@ public class Formato {
                 //driver.findElement(By.cssSelector("button.btn:nth-child(1)")).click();
                 
            }
-         
+           
+           //Entrar a la administracion
+           WebElement btnIngresar2 = driver.findElement(By.xpath("/html/body/header/div/div[2]/a"));
+           btnIngresar2.click();
+           
+           Thread.sleep(2000);
+           
+           //Editar Usuarios
+           WebElement editar = driver.findElement(By.xpath("/html/body/div/div/div/div/div/table/tbody/tr/td[6]/a"));
+           editar.click(); 
+           
+           driver.findElement(By.id("nombre")).clear();
+           driver.findElement(By.id("nombre")).sendKeys("Luffy15");
+           
+           driver.findElement(By.id("email")).clear();
+           driver.findElement(By.id("email")).sendKeys("car");
+           
+           driver.findElement(By.id("ciudad")).clear();
+           driver.findElement(By.id("ciudad")).sendKeys("Puente A48lto");
+           
+           driver.findElement(By.id("edad")).clear();
+           driver.findElement(By.id("edad")).sendKeys("25159");
+           
+           driver.findElement(By.id("fono")).clear();
+           driver.findElement(By.id("fono")).sendKeys("93");
+           
+           driver.findElement(By.cssSelector("html body div.container.mt-5 div.row.justify-content-center div.col-md-8 div.card div.card-body form button.btn.btn-primary")).click();
+           
+           driver.findElement(By.cssSelector("html body div.container.mt-5 div.row.justify-content-center div.col-md-8 div.card div.card-body form a.btn.btn-secondary")).click();
+           
+          
        }
        catch(Exception e){
            e.printStackTrace();
        }finally{
            //driver.quit();
        }
-    }
+    }**/
 }
